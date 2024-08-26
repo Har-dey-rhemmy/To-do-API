@@ -3,7 +3,7 @@ const Todo = require('../models/todo');
 const router = express.Router();
 
 // Create a new Todo
-router.post('/', async(req, res) => {
+router.post('/create', async(req, res) => {
     const { title, desc } = req.body;
     try {
         const newTodo = new Todo({ title, desc });
