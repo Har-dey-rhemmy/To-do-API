@@ -12,6 +12,6 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
-app.use('/api/todo-routes', todoRoutes);
+app.use('/', todoRoutes);
 
 app.listen(3000, () => console.log('Server running on port 3000'));
